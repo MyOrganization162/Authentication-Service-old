@@ -4,6 +4,7 @@ import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 import javax.persistence.*;
+import java.time.LocalDateTime;
 
 @Data
 @NoArgsConstructor
@@ -22,6 +23,8 @@ public class Signuser {
     private String password;
     private String phone;
     private boolean enabled = false;
+    private String token = "token";
+    private LocalDateTime creationtime = null;
 
     public Signuser(String firstName, String lastName, String email, String password, String phone) {
         this.firstName = firstName;

@@ -29,10 +29,12 @@ public class SignUpUserController {
     }
 
     @PostMapping(value = "/signUp")
-    public ResponseEntity<Signuser> signUpUser(@RequestBody Signuser signuser) throws Exception {
-        Signuser signUpSignuser = signUpUserService.addUser(signuser);
-        return buildResponse(signUpSignuser);
+    public Boolean signUpUser(@RequestBody Signuser signuser) throws Exception {
+        return signUpUserService.addUser(signuser);
+        //return buildResponse(signUpSignuser);
     }
+
+
 
     private ResponseEntity<Signuser> buildResponse(Signuser source) {
         return ResponseEntity.status(HttpStatus.CREATED).body(source);
