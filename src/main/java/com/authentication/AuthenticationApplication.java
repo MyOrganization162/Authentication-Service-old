@@ -28,8 +28,6 @@ public class AuthenticationApplication {
 
 		Signuser signuser4 = new Signuser("'vidhan'", "gain", "vidhan162@gmail.com", "123","123456789");
 		signUpUserRepository.save(signuser4);
-
-
 	}
 
 

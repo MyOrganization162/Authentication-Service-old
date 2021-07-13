@@ -31,7 +31,7 @@ public class SignUpUserService {
         // Email Is New. So create a Token and send him a verification Link to his mail Id
         String token = UUID.randomUUID().toString();
         signuser.setToken(token);
-        signuser.setCreationtime(LocalDateTime.now().plusSeconds(30)); // expires in 30 seconds
+        signuser.setCreationtime(LocalDateTime.now().plusSeconds(60)); // expires in 30 seconds
 
         // NO NEED AT PRODUCTION TIME
         signuser.setEnabled(false);
